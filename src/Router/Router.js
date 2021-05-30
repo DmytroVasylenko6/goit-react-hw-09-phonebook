@@ -22,7 +22,7 @@ const Router = () => {
   return (
     <PageContainer>
 
-      <Suspense fallback={<p align="center">Загружаем...</p>}>
+      <Suspense fallback={<p align="center">Loading...</p>}>
         <Switch>
           
           <Route exact path={paths.MAIN}>

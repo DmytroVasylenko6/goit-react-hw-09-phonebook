@@ -2,6 +2,7 @@ import React, {useCallback} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { authSelectors, authOperations } from '../../redux/auth';
 import defaultAvatar from './default-avatar.png';
+import Button from '../common/Button/Button';
 
 
 const styles = {
@@ -28,9 +29,12 @@ export default function UserMenu() {
         <div style={styles.container}>
             <img src={defaultAvatar} alt="" width="32" style={styles.avatar} />
             <span style={styles.name}>Welcome, {name} </span>
-            <button type="button" onClick={onLogout}>
-                Logout
-        </button>
+            <Button
+                text={'logout'}
+                listener={() => onLogout()}
+                color="red"
+              />
+            
         </div>
     );
 }

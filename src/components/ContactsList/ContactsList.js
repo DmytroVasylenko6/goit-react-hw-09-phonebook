@@ -26,7 +26,7 @@ export default function ContactsList() {
           return (
             <CSSTransition key={id} timeout={250} classNames="e-fade" appear={true}>
             <li id={id}  className={s.item}>
-              <p>
+              <p className={s.contactsText}>
                 <span className={s.contactName}>{name}</span> <span>{number}</span> 
               </p>
               <Button

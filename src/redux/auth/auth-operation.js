@@ -13,7 +13,7 @@ const token = {
 };
 
 const register = credentials => async dispatch => {
-    console.log(credentials)
+    
     dispatch(authActions.registerRequest());
 
     try {
@@ -21,8 +21,9 @@ const register = credentials => async dispatch => {
         
         token.set(response.data.token);
         dispatch(authActions.registerSuccess(response.data));
-    } catch(error) {
+    } catch (error) {
         dispatch(authActions.registerError(error.message));
+        dispatch(authActions.errorStatus(true));
     }
     
  };
@@ -37,6 +38,7 @@ const logIn = credentials => async dispatch => {
         dispatch(authActions.loginSuccess(response.data));
     } catch(error) {
         dispatch(authActions.loginError(error.message));
+        dispatch(authActions.errorStatus(true));
     }
  };
 
@@ -50,6 +52,7 @@ const logOut = () => async dispatch => {
         dispatch(authActions.logoutSuccess());
     } catch(error) {
         dispatch(authActions.logoutError(error.message));
+        
     }
 
 };
@@ -76,6 +79,8 @@ const getCurrentUser = () => async (dispatch, getState) => {
         dispatch(authActions.getCurrentUserSuccess(error.message));
     }
 };
+   
 
 
-export default { token, register, logIn, logOut, getCurrentUser };
+
+export default { token, register, logIn, logOut, getCurrentUser};

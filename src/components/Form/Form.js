@@ -21,7 +21,7 @@ export default function Form() {
   const contacts = useSelector(getVisibleContacts);
   const dispatch = useDispatch();
 
-  const addContact = useCallback((newContact) => dispatch(contactAdd(newContact), [dispatch]));
+  const addContact = useCallback((newContact) => dispatch(contactAdd(newContact)), [dispatch]);
 
   const inputNameId = shortid.generate();
   const inputNumberId = shortid.generate();

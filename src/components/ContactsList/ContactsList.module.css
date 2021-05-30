@@ -23,7 +23,7 @@
   margin-bottom: 20px;
 }
 
-p {
+.contactsText {
   display: flex;
   justify-content: space-between;
   align-items: center;
