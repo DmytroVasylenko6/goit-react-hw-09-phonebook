@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.MuiInputBase-marginDense {
+  margin-right: 50px;
+}
+
+.MuiInputBase-formControl {
+  margin-right: 20px;
+}

@@ -1,0 +1,32 @@
+.currencyContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.currencyItem {
+  display: flex;
+  padding: 30px;
+  border: 1px solid rgba(140, 139, 139, 0.53);
+  border-radius: 10px;
+  box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, 0.42);
+  width: min-content;
+}
+
+.currencyItem:not(:last-child) {
+  margin-right: 30px;
+}
+
+.currencySymbol {
+  margin-right: 5px;
+  font-family: Roboto;
+  font-size: 24px;
+}
+
+.currencyValue {
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 24px;
+}

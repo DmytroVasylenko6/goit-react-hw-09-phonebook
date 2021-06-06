@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import s from './Navigation.module.css';
 import { useSelector } from 'react-redux';
 import { authSelectors } from '../../redux/auth';
+import CurrencySelect from '../CurrencySelect';
 
 export default function Navigation() {
   
@@ -26,6 +27,17 @@ export default function Navigation() {
       >
         Contacts
       </NavLink>}
+
+       <NavLink
+        exact
+        to="/currency"
+        activeClassName={s.activeNavLink}
+        className={s.navLink}
+      >
+        Currency
+      </NavLink>
+
+      <CurrencySelect/>
       
     </div>
   );
